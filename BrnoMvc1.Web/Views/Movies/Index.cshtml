@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Create", "Create", "Movies", null, new { @class = "btn btn-primary" })
+
+@Html.Partial("_Grid", new List<string>() { "Pelisky" })
+
+
+@Html.ActionLink("Submit Email", "SendMovieByEmail", "Movie", new { Id = 1 }, null)

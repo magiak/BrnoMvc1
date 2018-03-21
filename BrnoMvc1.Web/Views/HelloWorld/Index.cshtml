@@ -1,0 +1,10 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Model</h2>
+
+<a class="btn btn-primary" href="/Administration/User">My Button</a>
+@Html.ActionLink("My Button", "Index", "User", new { Area = "Administration" }, new { @class = "btn btn-primary" })

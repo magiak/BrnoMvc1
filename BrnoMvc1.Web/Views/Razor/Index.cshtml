@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (true)
+{
+    <text>Hello, world</text><br />
+    @: Hello, world 2
+    @: Hello world 3
+    <div>
+        Hello world 4
+    </div>
+}
+
+<div class="@if (true)
+{ <text>btn btn-primary</text> }">BTN</div>
+
+@{
+    var a = 5;
+    var b = 7;
+    var c = a + b;
+}
+
+@*Result@(c)*@
+
+<!--
+ Result@(c)
+-->
+@@
+
+<div id="email">
+    lukas@gmail.com
+</div>
+
+@{
+    Func<dynamic, object> bold = @<strong>@item</strong>;
+}
+
+Hi, @bold("") <br />
+
+@{ var test = "ahoj";
+
+
+
+    <text>@test</text> }
+
+
+@(test)hello
+
+@{ @Html.ActionLink("Test", "Index") }
+
+
+@{ Html.ViewContext.Writer.WriteLine("Neco"); }
+
+Hello
+
+<hr />
+
+@(test)
+@("Ahoj")
+
+@{
+    string text = $@"asdohso{test}
+";
+
+
+}
+
+<hr />
+1.
+
+@(@"
+Ahoj,
+
+
+Jirko
+
+
+
+
+
+asd")
+
+
+<hr />
+2.
+@@("@@")
+
+<hr />
+3.
+@Html.ActionLink("My Link", "Index")
+@{ var link = Html.ActionLink("My Link", "Index"); }
+@link
+
+
+@section myfooter {
+    Hello world from razor index
+}
